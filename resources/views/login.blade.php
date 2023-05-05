@@ -32,19 +32,28 @@
 
 <body>
 
-   
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">Navbar</a>
+    <form class="d-flex">
+    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-info">
+            Login
+        </button>
+
+    </form>
+  </div>
+</nav>
     <!-- Content -->
 
 
     <div class="container">
         <div class="pesanan">
-            <div class="pesanan-header">
-                <h2 class="text-center mt-2 mb-2">Login</h2>
-            </div>
-            <div class="pesanan-body">
-                <div class="card" style="width:100%; border:2px solid grey;">
-                    <div class="card-body">
-                        <form class="form-horizontal" method="POST" action="/postlogin">
+
+        
+        <div class="modal fade" id="modal-info">
+            <div class="modal-dialog">
+            <div class="modal-content bg-light">
+            <form class="form-horizontal" method="POST" action="/postlogin">
                             {{ csrf_field() }}
                             <div class="card-body">
                                 <div class="form-group row">
@@ -69,9 +78,12 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
-                </div>
             </div>
+            <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        
         </div>
     </div>
     <!-- End Content -->
